@@ -1,1 +1,32 @@
 [2025-01-11 09:14:24,747: INFO: main: Welcome to our Text Summarizer Project]
+[2025-01-12 11:21:07,550: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-12 11:21:07,554: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-12 11:21:07,556: INFO: common: Created directory at: artifacts]
+[2025-01-12 11:21:07,559: INFO: common: Created directory at: artifacts/data_ingestion]
+[2025-01-12 11:21:08,721: INFO: 3679176623: artifacts/data_ingestion/data.zip downloaded with the following info: Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: A81B:19C89D:24E1FF3:268567E:67839793
+Accept-Ranges: bytes
+Date: Sun, 12 Jan 2025 10:21:09 GMT
+Via: 1.1 varnish
+X-Served-By: cache-mad2200136-MAD
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1736677269.719145,VS0,VE390
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 05564d3581e62c48a98d38901571a93aae13103d
+Expires: Sun, 12 Jan 2025 10:26:09 GMT
+Source-Age: 0
+
+]
+[2025-01-12 11:21:08,898: INFO: 3679176623: Zip file extracted successfully]
