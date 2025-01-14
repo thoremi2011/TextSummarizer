@@ -119,3 +119,145 @@ Source-Age: 0
 [2025-01-12 15:27:17,686: INFO: common: Created directory at: artifacts]
 [2025-01-12 15:27:17,687: INFO: common: Created directory at: artifacts/data_transformation]
 [2025-01-12 15:27:23,743: INFO: main: >>>>>> stage Data Transformation Stage completed <<<<<<]
+[2025-01-14 11:17:30,433: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-14 11:49:03,887: INFO: config: PyTorch version 2.5.1 available.]
+[2025-01-14 11:59:08,080: INFO: config: PyTorch version 2.1.0+cu121 available.]
+[2025-01-14 12:39:33,436: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:03:00,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:03:00,769: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:03:00,771: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:03:00,774: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:06:37,768: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:06:37,774: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:06:37,776: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:06:37,778: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:10:39,345: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:10:40,205: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:10:40,212: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:10:40,215: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:10:40,217: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:49:25,239: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:49:25,913: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-01-14 13:49:25,916: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:49:25,918: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:49:25,919: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:49:25,919: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:49:35,547: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:49:36,129: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-01-14 13:49:36,133: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:49:36,135: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:49:36,136: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:49:36,137: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:49:38,336: ERROR: main: Can't load the model for 'google/pegasus-cnn_dailymail'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'google/pegasus-cnn_dailymail' is the correct path to a directory containing a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.]
+Traceback (most recent call last):
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\modeling_utils.py", line 3897, in from_pretrained
+    ).start()
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\context.py", line 327, in _Popen
+    return Popen(process_obj)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\popen_spawn_win32.py", line 45, in __init__
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\main.py", line 31, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 17, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\models\auto\auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\modeling_utils.py", line 3941, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load the model for 'google/pegasus-cnn_dailymail'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'google/pegasus-cnn_dailymail' is the correct path to a directory containing a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+[2025-01-14 13:54:56,038: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:54:56,623: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-01-14 13:54:56,626: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:54:56,628: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:54:56,629: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:54:56,629: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:55:06,208: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 13:55:06,752: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-01-14 13:55:06,755: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 13:55:06,758: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 13:55:06,759: INFO: common: Created directory at: artifacts]
+[2025-01-14 13:55:06,760: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 13:55:08,730: ERROR: main: Can't load the model for 'google/pegasus-cnn_dailymail'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'google/pegasus-cnn_dailymail' is the correct path to a directory containing a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.]
+Traceback (most recent call last):
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\modeling_utils.py", line 3897, in from_pretrained
+    ).start()
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\context.py", line 327, in _Popen
+    return Popen(process_obj)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\popen_spawn_win32.py", line 45, in __init__
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\multiprocessing\spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\main.py", line 31, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer.train()
+  File "C:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 17, in train
+    model_pegasus = AutoModelForSeq2SeqLM.from_pretrained(self.config.model_ckpt).to(device)
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\models\auto\auto_factory.py", line 564, in from_pretrained
+    return model_class.from_pretrained(
+  File "c:\Projects\011_NLP_HuggF_Summarizer\TextSummarizer\venv_TextSumm\lib\site-packages\transformers\modeling_utils.py", line 3941, in from_pretrained
+    raise EnvironmentError(
+OSError: Can't load the model for 'google/pegasus-cnn_dailymail'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'google/pegasus-cnn_dailymail' is the correct path to a directory containing a file named pytorch_model.bin, tf_model.h5, model.ckpt or flax_model.msgpack.
+[2025-01-14 14:15:56,066: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 14:15:57,655: INFO: main: >>>>>> stage Model Trainer Stage started <<<<<<]
+[2025-01-14 14:15:57,658: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-01-14 14:15:57,661: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-01-14 14:15:57,662: INFO: common: Created directory at: artifacts]
+[2025-01-14 14:15:57,662: INFO: common: Created directory at: artifacts/model_trainer]
+[2025-01-14 14:16:07,869: INFO: config: PyTorch version 2.5.1+cu124 available.]
+[2025-01-14 14:34:16,938: INFO: model_trainer: Training completed]
+[2025-01-14 14:34:46,750: INFO: model_trainer: Model saved to artifacts/model_trainer\pegasus-samsum-model]
+[2025-01-14 14:34:46,865: INFO: model_trainer: Tokenizer saved to artifacts/model_trainer\tokenizer]
+[2025-01-14 14:34:47,222: INFO: main: >>>>>> stage Model Trainer Stage completed <<<<<<]
