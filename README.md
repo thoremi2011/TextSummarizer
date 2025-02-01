@@ -8,7 +8,7 @@
 4. Model evaluation
 5. Model deployment
 
-## Components
+## Index
 1. config.yaml
 2. params.yaml
 3. config entity
